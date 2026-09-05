@@ -1,0 +1,127 @@
+/* Page specific styles for Contact page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  padding: 28px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-accent);
+}
+
+.contact-card strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--brand-blue-700);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--minor-green-600);
+}
+
+.contact-card a {
+  color: var(--brand-blue-700);
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  color: var(--accent-orange-600);
+}
+
+/* Accordion FAQs */
+.faq-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-item {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.accordion-item:hover {
+  border-color: var(--border-accent);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 20px 24px;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-blue-700);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.accordion-trigger::after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--accent-orange-600);
+  transition: var(--transition);
+}
+
+.accordion-trigger[aria-expanded="true"] {
+  background: var(--primary-50);
+  color: var(--brand-blue-700);
+}
+
+.accordion-trigger[aria-expanded="true"]::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  display: none;
+  padding: 0 24px 24px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--primary-50);
+}
+
+.accordion-panel.open {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-form {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+}

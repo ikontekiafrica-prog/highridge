@@ -1,0 +1,97 @@
+/* Page specific styles for Academics page */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  padding: 36px 28px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--minor-green-600);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-accent);
+}
+
+.feature-card:hover::before {
+  background: var(--minor-green-600);
+  width: 6px;
+}
+
+.feature-card h3 {
+  font-size: 1.35rem;
+  color: var(--brand-blue-700);
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.term-card {
+  background: var(--bg-card);
+  padding: 24px 20px;
+  border-radius: var(--radius-md);
+  border-top: 4px solid var(--minor-green-600);
+  box-shadow: var(--shadow-sm);
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.term-card strong {
+  display: block;
+  font-family: var(--font-heading);
+  color: var(--accent-orange-600);
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 992px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .terms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid, .curriculum-grid, .terms-grid {
+    grid-template-columns: 1fr;
+  }
+}

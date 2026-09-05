@@ -1,0 +1,71 @@
+/* Page specific styles for About page */
+.about-hero {
+  padding: 56px 0 48px;
+  background: var(--primary-900);
+  color: #ffffff;
+  border-bottom: 4px solid var(--primary-800);
+}
+
+.about-hero h1 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  max-width: 800px;
+}
+
+.section-intro {
+  max-width: 960px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-intro p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: var(--bg-card);
+  padding: 32px 24px;
+  border-radius: var(--radius-md);
+  border-top: 4px solid var(--minor-green-600);
+  box-shadow: var(--shadow-md);
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--minor-green-600);
+}
+
+.value-card h3 {
+  color: var(--brand-blue-700);
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

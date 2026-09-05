@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Highridge School | Quality Pre-Primary & Primary Education in Arusha</title>
+  <meta name="description" content="Highridge School is a co-educational pre-primary and primary school in Oloirien, Arusha, committed to quality education, girls' access, and support for underprivileged children." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles/shared.css" />
+  <style>
+    /* Hero Section Custom Styles for Index */
+    .hero-section {
+      padding: 72px 0 64px;
+      background: var(--primary-900);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--primary-800);
+    }
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 220px;
+      height: 220px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+    .hero-content h1 span {
+      color: #dff3ff;
+      font-style: italic;
+    }
+    .hero-content p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-card-preview {
+      background: rgba(7, 138, 245, 0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+    .hero-media-cover {
+      width: 100%;
+      height: 200px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.22);
+    }
+    .hero-card-preview h3 {
+      color: #dff3ff;
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+    .hero-card-preview p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .hero-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-chip {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #eaf6ff;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feature-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--bg-card);
+      padding: 36px 28px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-gold);
+    }
+    .feature-card .card-icon {
+      font-size: 2rem;
+      color: var(--gold-500);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .cta-banner {
+      background: var(--primary-900);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      margin: 40px 0;
+    }
+    .cta-banner h2 {
+      color: #dff3ff;
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .feature-card-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="page-wrap">
+      <div class="topbar">
+        <span><i class="fa-solid fa-phone"></i> Hotline: <a href="tel:+255713033297">+255 713 033 297</a> | <a href="tel:+255754599827">+255 754 599 827</a></span>
+        </div>
+      <div class="navbar">
+        <a href="index.html" class="brand-row">
+          <img class="brand-logo" src="images/logo.png" alt="High Ridge logo" />
+        </a>
+        <nav>
+          <div class="nav-list">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="academics.html">Academics</a>
+            <a href="sports.html">Sports Academy</a>
+            <a href="extracurricular.html">Extracurricular</a>
+            <a href="sponsorship.html">Sponsorship</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+        <div class="hero-actions">
+          <a class="primary-btn" href="sponsorship.html"><i class="fa-solid fa-hand-holding-heart"></i> Donate / Sponsor</a>
+          <button class="burger" type="button" aria-label="Toggle menu"><span></span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="page-wrap">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="title-badge"><i class="fa-solid fa-award"></i> Pre-Primary & Primary Education in Arusha</div>
+          <h1>Highridge School: <span>Striving to Excel</span></h1>
+          <p>Highridge School is a co-educational school in Oloirien, Arusha, offering quality pre-primary and primary education rooted in practical learning, strong values, and inclusive access for children from all backgrounds.</p>
+          <div class="hero-btns">
+            <a class="primary-btn" href="downloads/APPLICATION_FORM.pdf" download><i class="fa-solid fa-paper-plane"></i> Apply for Admission</a>
+            <a class="primary-btn" href="downloads/FEE_SCHEDULE.pdf" download><i class="fa-solid fa-money-bill-wave"></i> Fee Schedule and Guide</a>
+          </div>
+        </div>
+        <div class="hero-card-preview">
+          <img class="hero-media-cover" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80" alt="High Ridge Classroom Experience" />
+          <h3>Inspiring Environment for Every Child</h3>
+          <p>"A supportive learning atmosphere where every child is empowered with character, academic confidence, and moral values."</p>
+          <div class="hero-badge-row">
+            <span class="hero-chip"><i class="fa-solid fa-circle-check"></i> Beautiful Arusha Campus</span>
+            <span class="hero-chip"><i class="fa-solid fa-circle-check"></i> Coding & STEM Club</span>
+            <span class="hero-chip"><i class="fa-solid fa-circle-check"></i> Sports Academy</span>
+            <span class="hero-chip"><i class="fa-solid fa-circle-check"></i> Qualified Educators</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-wrap">
+    <!-- Quick Impact Stats -->
+    <section class="section">
+      <div class="stats-callout">
+        <div class="callout">
+          <strong><span data-count="18">0</span> Classrooms</strong>
+          Learning spaces designed for early years and primary education.
+        </div>
+        <div class="callout">
+          <strong><span data-count="5559">0</span> sqm</strong>
+          School campus area in Oloirien, Arusha, with all-weather access.
+        </div>
+        <div class="callout">
+          <strong><span data-count="100">0</span>%</strong>
+          Focus on practical learning, girl empowerment, and social equity.
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Levels Showcase -->
+    <section class="section">
+      <div class="section-title-wrap">
+        <div class="title-badge"><i class="fa-solid fa-book"></i> Academic Excellence</div>
+        <h2>Our Academic Programs</h2>
+        <p>From baby classes and nursery education to primary classes 1–7, we follow a practical, child-centered approach that builds confidence, skills, and a love of learning.</p>
+      </div>
+      <div class="feature-card-grid">
+        <article class="feature-card">
+          <div class="card-img-wrap">
+            <img class="card-img" src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80" alt="Daycare & Nursery Children" />
+          </div>
+          <h3><i class="fa-solid fa-child" style="color: var(--gold-500);"></i> Daycare & Nursery</h3>
+          <p>Safe, joyful spaces fostering early socialization, speech development, emotional stability, and creative discovery.</p>
+          <a href="academics.html" style="font-weight: 700; font-size: 0.95rem; margin-top: 12px; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="feature-card">
+          <div class="card-img-wrap">
+            <img class="card-img" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Pre-School Reading" />
+          </div>
+          <h3><i class="fa-solid fa-pencil" style="color: var(--gold-500);"></i> Pre-School</h3>
+          <p>Hands-on literacy, numeracy, storytelling, and interactive learning that build early reading and arithmetic confidence.</p>
+          <a href="academics.html" style="font-weight: 700; font-size: 0.95rem; margin-top: 12px; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="feature-card">
+          <div class="card-img-wrap">
+            <img class="card-img" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Primary School Classroom" />
+          </div>
+          <h3><i class="fa-solid fa-graduation-cap" style="color: var(--gold-500);"></i> Primary Grades 1 - 6</h3>
+          <p>Rigorous core curriculum in Science, Math, Languages, STEM coding, sportsmanship, and life values for future leaders.</p>
+          <a href="academics.html" style="font-weight: 700; font-size: 0.95rem; margin-top: 12px; display: inline-block;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="section">
+      <div class="section-title-wrap">
+        <div class="title-badge"><i class="fa-solid fa-video"></i> Video Tour</div>
+        <h2>Experience High Ridge Campus Life</h2>
+        <p>Take a virtual video walk-through of our interactive classrooms, sports facilities, and early learning spaces.</p>
+      </div>
+      <div class="video-showcase-container">
+        <video class="video-player" controls poster="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <!-- Dual Campuses Showcase -->
+    <section class="section">
+      <div class="section-title-wrap">
+        <div class="title-badge"><i class="fa-solid fa-building-columns"></i> Campuses</div>
+        <h2>Our Modern Facilities & Campuses</h2>
+        <p>Equipped with safe playgrounds, computer & technology labs, reading spaces, and sports facilities.</p>
+      </div>
+      <div class="facility-grid">
+        <article class="facility-card">
+          <div class="facility-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="High Ridge Arusha Campus" />
+          </div>
+          <h3><i class="fa-solid fa-location-dot"></i> Arusha Campus</h3>
+          <p><strong><i class="fa-solid fa-map-pin"></i> Location:</strong> PPF Road near Njiro Relini bus stop, Themi area, Arusha.</p>
+          <p>Features early learning activity rooms, spacious sports grounds, music and arts center, and round-the-clock secure environment.</p>
+          <a href="contact.html#arusha" class="outline-btn" style="margin-top: 16px;">Contact Arusha Branch</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sponsorship CTA Banner -->
+    <section class="cta-banner">
+      <div>
+        <h2>Become an Angel of High Ridge</h2>
+        <p>Help us empower talented underprivileged students with books, sports equipment, and educational grants.</p>
+      </div>
+      <a href="sponsorship.html" class="primary-btn"><i class="fa-solid fa-heart"></i> Support a Student Today</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer page-wrap">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>High Ridge School</h4>
+        <p>Nurturing young learners through safe, supportive teaching, academic excellence, and strong moral values.</p>
+        <p><strong>Motto:</strong> Strive to Excel</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="sports.html">Sports Academy</a>
+        <a href="extracurricular.html">Extracurricular</a>
+        <a href="sponsorship.html">Sponsorship</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="APPLICATION FORM.pdf" download><i class="fa-solid fa-file-pdf"></i> Application Form (PDF)</a>
+        <a href="FEE SCHEDULE.pdf" download><i class="fa-solid fa-file-invoice-dollar"></i> Fee Schedule (PDF)</a>
+      </div>
+      <div class="footer-column">
+        <h4>Campuses</h4>
+        <a href="contact.html#arusha"><i class="fa-solid fa-location-dot"></i> Arusha Campus</a>
+                <a href="tel:+255713033297"><i class="fa-solid fa-phone"></i> +255 713 033 297</a>
+        <a href="tel:+255754599827"><i class="fa-solid fa-phone"></i> +255 754 599 827</a>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/highridgeschooltz" target="_blank"><i class="fa-brands fa-instagram"></i> @highridgeschooltz</a>
+        <a href="https://www.facebook.com/profile.php?id=100094717077884" target="_blank"><i class="fa-brands fa-facebook"></i> Highridge School Activities</a>
+        
+      </div>
+    </div>
+    <div class="bottom-bar">
+      <p>© 2026 High Ridge Nursery & Primary School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal overlay -->
+  <div class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close"></button>
+      <h3 class="modal-title">Support High Ridge Today</h3>
+      <form class="modal-form">
+        <input type="hidden" id="modalType" name="modalType" value="" />
+        <label>
+          Full Name
+          <input type="text" name="name" required placeholder="Your full name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required placeholder="you@example.com" />
+        </label>
+        <label>
+          Phone
+          <input type="text" name="phone" required placeholder="+255 7XX XXX XXX" />
+        </label>
+        <label>
+          Message
+          <textarea name="message" required placeholder="Tell us how you would like to help"></textarea>
+        </label>
+        <div class="form-actions" style="margin-top: 16px;">
+          <button type="submit" class="primary-btn" style="width: 100%;">Send Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
